@@ -1,0 +1,15 @@
+@model IEnumerable<BlogPost>
+
+<h2>My Pages</h2>
+
+@foreach (var post in Model)
+{
+    <div>
+        <h3>@post.Title</h3>
+        <p>@post.Content</p>
+        <a asp-controller="BlogPost" asp-action="Edit" asp-route-id="@post.Id">Edit</a> |
+        <a asp-controller="BlogPost" asp-action="Delete" asp-route-id="@post.Id">Delete</a>
+    </div>
+}
+
+<a asp-controller="BlogPost" asp-action="Create">Create New Post</a>

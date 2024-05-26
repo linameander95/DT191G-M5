@@ -1,0 +1,12 @@
+@model IEnumerable<puremy.Models.BlogPost>
+
+<h1>Index</h1>
+
+@foreach (var item in Model) {
+    <div>
+        <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+        <p>@Html.DisplayFor(modelItem => item.Content)</p>
+        <p>@Html.DisplayFor(modelItem => item.DatePosted)</p>
+        <a href="@Url.Action("Details", new { id = item.Id })">Read More</a>
+    </div>
+}

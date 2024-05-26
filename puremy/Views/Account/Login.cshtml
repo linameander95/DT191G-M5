@@ -1,0 +1,27 @@
+@model puremy.Models.LoginViewModel
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="RememberMe"></label>
+        <input asp-for="RememberMe" />
+        <span asp-validation-for="RememberMe"></span>
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+<div>
+    <p>If you don't have an account yet, you can register here:</p>
+    <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+</div>
