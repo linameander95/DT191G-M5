@@ -23,7 +23,27 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+app.Use(async (context, next) =>
+{
+    context.Response.OnStarting(() =>
+    {
+        if (!context.Response.Headers.ContainsKey("Content-Type"))
+        {
+            context.Response.Headers.Append("Content-Type", "text/html; charset=utf-8");
+        }
+
+        if (!context.Response.Headers.ContainsKey("X-Content-Type-Options"))
+        {
+            context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+        }
+
+        return Task.CompletedTask;
+    });
+
+    await next.Invoke();
+});
+
+// app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

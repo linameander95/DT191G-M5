@@ -14,14 +14,15 @@
         <span asp-validation-for="Password"></span>
     </div>
     <div>
-        <label asp-for="RememberMe"></label>
-        <input asp-for="RememberMe" />
-        <span asp-validation-for="RememberMe"></span>
+        <div class="checkbox-container">
+            <label asp-for="RememberMe"></label>
+            <input asp-for="RememberMe" />
+            <span asp-validation-for="RememberMe"></span>
+        </div>
     </div>
     <button type="submit">Login</button>
 </form>
 
 <div>
-    <p>If you don't have an account yet, you can register here:</p>
-    <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+    <p>If you don't have an account yet, you can register <a asp-controller="Account" asp-action="Register" class="textlink">here</a>.</p>
 </div>

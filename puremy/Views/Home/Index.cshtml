@@ -7,6 +7,6 @@
         <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
         <p>@Html.DisplayFor(modelItem => item.Content)</p>
         <p>@Html.DisplayFor(modelItem => item.DatePosted)</p>
-        <a href="@Url.Action("Details", "BlogPosts", new { id = item.Id })">Read More</a>
+        <a href="@Url.Action("Details", "BlogPost", new { id = item.Id })">Read More</a>
     </div>
 }

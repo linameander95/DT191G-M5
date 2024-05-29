@@ -1,52 +1,198 @@
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-
- .btn-primary {
-    background-color: #1a8cff;
-    border-color: #1a8cff;
-}
-
-.navbar {
-    background-color: #333;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-
-.navbar-brand {
-    color: #d5d5d5 !important;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.navbar-nav li a {
-    color: #d5d5d5 !important;
-}
-
-.navbar-nav {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Make the body take up at least the full height of the viewport */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #aeaeae;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px; /* Adjust this value to change the height of the textarea */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="checkbox"] {
+    width: auto; /* Reset the width */
+    padding: 0; /* Reset the padding */
+    margin: 0; /* Reset the margin */
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.container {
+    flex: 1; /* Make the container take up all available space */
+    padding: 20px;
+    width: 70%; 
+}
+
+.textlink {
+    color: inherit; /* Make the link color the same as the text color */
+    text-decoration: underline; /* Underline the link to indicate it's clickable */
+}
+
+.textlink:visited {
+    color: inherit; /* Make the visited link color the same as the text color */
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center; /* Align items vertically in the center */
 }
 
 .nav-item {
+    margin-right: 100px;
     padding: 0 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    line-height: 40px; /* Set the line-height to match the height of the navbar */
 }
 
-.nav-link {
-    transition: all 0.3s ease 0s;
+.nav-item:last-child {
+    margin-right: 0; /* Remove the right margin from the last link */
 }
 
-.nav-link:hover, .navbar-brand:hover {
-    color: #fff !important;
+.nav-item:hover {
+    background-color: #aeaeae; /* Change the background color on hover */
+}
+
+.nav-item.active {
+    background-color: #4f4f4f; /* Change the background color of the active link */
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-item img {
+    vertical-align: middle;
+}
+
+#singlepost {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#singlepost p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#singlepost a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+#singlepost a:hover {
+    color: #aeaeae;
+}
+
+#singlepost a.create-post {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#singlepost a.create-post:hover {
+    color: #aeaeae;
+    background-color: #f8f9fa;
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #aeaeae;
 }

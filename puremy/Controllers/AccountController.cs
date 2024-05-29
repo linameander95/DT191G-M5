@@ -21,60 +21,89 @@ public class AccountController : Controller
         _context = context;
     }
 
-    [AllowAnonymous]
-    public IActionResult Register()
-    {
-        return View();
-    }
+    [HttpGet]
+[AllowAnonymous]
+public IActionResult Register()
+{
+    return View();
+}
 
-    [HttpPost]
-    [AllowAnonymous]
-    public async Task<IActionResult> Register(RegisterViewModel model)
+[HttpPost]
+[AllowAnonymous]
+public async Task<IActionResult> Register(RegisterViewModel model)
+{
+    if (ModelState.IsValid)
     {
-        if (ModelState.IsValid)
+        var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+        var result = await _userManager.CreateAsync(user, model.Password);
+
+        if (result.Succeeded)
         {
-            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
-            var result = await _userManager.CreateAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-                return RedirectToAction("index", "home");
-            }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error.Description);
-            }
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            return RedirectToAction("index", "home");
         }
 
-        return View(model);
-    }
-
-    [AllowAnonymous]
-    public IActionResult Login()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    [AllowAnonymous]
-    public async Task<IActionResult> Login(LoginViewModel model)
-    {
-        if (ModelState.IsValid)
+        foreach (var error in result.Errors)
         {
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
-
-            if (result.Succeeded)
+            Console.WriteLine(error.Description);
+            ModelState.AddModelError("", error.Description);
+        }
+    }
+    else
+    {
+        Console.WriteLine("Model validation failed.");
+        foreach (var modelState in ViewData.ModelState.Values)
+        {
+            foreach (var error in modelState.Errors)
             {
-                return RedirectToAction("index", "home");
+                Console.WriteLine(error.ErrorMessage);
             }
+        }
+    }
 
+    return View(model);
+}
+
+public IActionResult Login()
+{
+    return View();
+}
+
+[HttpPost]
+[AllowAnonymous]
+public async Task<IActionResult> Login(LoginViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        if (user == null)
+        {
+            Console.WriteLine("The user does not exist.");
             ModelState.AddModelError("", "Invalid login attempt");
+            return View(model);
         }
 
-        return View(model);
+        if (await _userManager.IsLockedOutAsync(user))
+        {
+            Console.WriteLine("The user is locked out.");
+            ModelState.AddModelError("", "Invalid login attempt");
+            return View(model);
+        }
+
+        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+
+        if (!result.Succeeded)
+        {
+            Console.WriteLine("Invalid login attempt.");
+            ModelState.AddModelError("", "Invalid login attempt");
+            return View(model);
+        }
+
+        return RedirectToAction("index", "home");
     }
+
+    return View(model);
+}
 
     public async Task<IActionResult> Logout()
     {
