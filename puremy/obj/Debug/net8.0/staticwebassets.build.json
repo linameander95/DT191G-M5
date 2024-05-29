@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R+pY4FTsG0hkzj0OYadYmkMktsPqZ1cgzD6db07z4pc=",
+  "Hash": "lCgG3O3UqJfIm66NqSCGdD6Q7lL44WhRa2V1ipWiQD8=",
   "Source": "puremy",
   "BasePath": "_content/puremy",
   "Mode": "Default",
@@ -1195,12 +1195,12 @@
       "OriginalItemSpec": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\puremy.bundle.scp.css"
     },
     {
-      "Identity": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\css\\site.css",
+      "Identity": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\css\\custom.css",
       "SourceId": "puremy",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\",
       "BasePath": "_content/puremy",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/custom.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1211,7 +1211,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot\\css\\custom.css"
     },
     {
       "Identity": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\favicon.ico",

@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\puremy.bundle.scp.css"
     },
     {
-      "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
     },
     {
       "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\favicon.ico",

@@ -143,3 +143,4 @@ C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\bin\Debug\net8.0\Microsoft.E
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\puremy.MvcApplicationPartsAssemblyInfo.cs
+C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\puremy.sourcelink.json
