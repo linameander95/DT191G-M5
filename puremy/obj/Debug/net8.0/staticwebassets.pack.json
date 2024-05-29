@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\puremy.bundle.scp.css",
-      "PackagePath": "staticwebassets\\puremy.bundle.scp.css"
-    },
-    {
       "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\css\\custom.css",
       "PackagePath": "staticwebassets\\css\\custom.css"
     },
@@ -243,6 +239,10 @@
     {
       "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\xampp\\htdocs\\Universitetet\\.NET\\DT191G-M5\\puremy\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.puremy.props",

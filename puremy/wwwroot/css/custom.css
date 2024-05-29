@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh; /* Make the body take up at least the full height of the viewport */
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
@@ -43,7 +43,7 @@ form input, form textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 form button {
@@ -64,7 +64,7 @@ form button:hover {
 
 form textarea {
     width: 100%;
-    height: 200px; /* Adjust this value to change the height of the textarea */
+    height: 200px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -72,9 +72,9 @@ form textarea {
 }
 
 form input[type="checkbox"] {
-    width: auto; /* Reset the width */
-    padding: 0; /* Reset the padding */
-    margin: 0; /* Reset the margin */
+    width: auto; 
+    padding: 0; 
+    margin: 0; 
     margin-bottom: 5px;
     margin-left: 5px;
 }
@@ -85,18 +85,18 @@ form input[type="checkbox"] {
 }
 
 .container {
-    flex: 1; /* Make the container take up all available space */
+    flex: 1;
     padding: 20px;
     width: 70%; 
 }
 
 .textlink {
-    color: inherit; /* Make the link color the same as the text color */
-    text-decoration: underline; /* Underline the link to indicate it's clickable */
+    color: inherit;
+    text-decoration: underline;
 }
 
 .textlink:visited {
-    color: inherit; /* Make the visited link color the same as the text color */
+    color: inherit;
 }
 
 .nav-container {
@@ -104,7 +104,7 @@ form input[type="checkbox"] {
     flex-direction: row;
     justify-content: space-between;
     background-color: #ffffff;
-    align-items: center; /* Align items vertically in the center */
+    align-items: center;
 }
 
 .nav-item {
@@ -116,19 +116,19 @@ form input[type="checkbox"] {
     text-decoration: none;
     transition: background-color 0.3s ease;
     display: inline-block;
-    line-height: 40px; /* Set the line-height to match the height of the navbar */
+    line-height: 40px;
 }
 
 .nav-item:last-child {
-    margin-right: 0; /* Remove the right margin from the last link */
+    margin-right: 0;
 }
 
 .nav-item:hover {
-    background-color: #aeaeae; /* Change the background color on hover */
+    background-color: #aeaeae;
 }
 
 .nav-item.active {
-    background-color: #4f4f4f; /* Change the background color of the active link */
+    background-color: #4f4f4f;
 }
 
 .nav-list {

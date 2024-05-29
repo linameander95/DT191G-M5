@@ -135,9 +135,7 @@ C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\staticwebas
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.puremy.props
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.puremy.props
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\staticwebassets.pack.json
-C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\scopedcss\bundle\puremy.styles.css
-C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\scopedcss\projectbundle\puremy.bundle.scp.css
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\puremy.csproj.Up2Date
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\puremy.dll
 C:\xampp\htdocs\Universitetet\.NET\DT191G-M5\puremy\obj\Debug\net8.0\refint\puremy.dll
