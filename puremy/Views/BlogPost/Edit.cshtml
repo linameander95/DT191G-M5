@@ -13,6 +13,7 @@
         <label asp-for="Content"></label>
         <textarea asp-for="Content"></textarea>
         <span asp-validation-for="Content"></span>
+        @Html.HiddenFor(model => model.UserId)
     </div>
     <div>
         <input type="submit" value="Save" />

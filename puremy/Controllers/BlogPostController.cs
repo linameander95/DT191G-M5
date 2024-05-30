@@ -88,8 +88,7 @@ namespace puremy.Controllers
         // POST: BlogPosts/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content,DatePosted")] BlogPost blogPost)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content,UserId")] BlogPost blogPost)
         {
             if (id != blogPost.Id)
             {
